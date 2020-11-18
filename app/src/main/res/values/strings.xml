@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">WSB - TOTA</string>
+
+    <string name="opis">Budżet domowy</string>
+    <string name="add_income">Dodaj przychód</string>
+    <string name="add_expense">Dodaj wydatek</string>
+    <string name="incomes">Przychody</string>
+    <string name="expenses">Wydatki</string>
+    <string name="sum_incomes">Suma przychodów</string>
+    <string name="sum_expenses">Suma wydatków</string>
+    <string name="close">Zamknij</string>
+
+    <string name="add_income_name">Nazwa przychodu</string>
+    <string name="add_value">Wartość</string>
+    <string name="add_data">Data</string>
+    <string name="add_income_button">Dodaj przychód</string>
+    <string name="add_canceled">Anuluj</string>
+
+    <string name="add_category_name">Rodzaj wydatku</string>
+    <string name="add_expense_name">Nazwa wydatku</string>
+    <string name="add_expense_button">Dodaj wydatek</string>
 </resources>
