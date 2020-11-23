@@ -32,7 +32,8 @@
             android:id="@+id/add_income"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_income" />
+            android:text="@string/add_income"
+            android:onClick="addIncomeButtonOnClickAction"/>
 
         <Button
             android:id="@+id/add_expense"
