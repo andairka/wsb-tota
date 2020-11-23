@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.andairka.wsb.tota.MainActivity">
 
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Hello World!"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--        app:layout_constraintRight_toRightOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/czesio"-->
-    <!--        android:text="Guziczek"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"/>-->
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="273dp"
@@ -35,11 +19,14 @@
         tools:text="@string/opis" />
 
     <LinearLayout
-        android:layout_width="414dp"
-        android:layout_height="207dp"
+        android:id="@+id/add_buttons_layout"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="212dp">
+        tools:layout_editor_absoluteY="212dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
 
         <Button
             android:id="@+id/add_income"
@@ -67,13 +54,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/sum_income_layout"
         android:layout_width="408dp"
         android:layout_height="80dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="443dp">
+        tools:layout_editor_absoluteY="443dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_buttons_layout">
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextPersonName9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,13 +83,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/sum_expense_layout"
         android:layout_width="406dp"
         android:layout_height="76dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="545dp">
+        tools:layout_editor_absoluteY="545dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sum_income_layout">
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextPersonName11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +116,9 @@
         android:layout_height="108dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="622dp">
+        tools:layout_editor_absoluteY="622dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sum_expense_layout">
 
         <Button
             android:id="@+id/closed"
