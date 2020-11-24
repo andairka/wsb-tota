@@ -7,6 +7,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.andairka.wsb.tota.database.DatabaseService;
+import com.andairka.wsb.tota.database.entities.Income;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ViewIncomeActivty extends AppCompatActivity {
 
     @Override
@@ -14,6 +20,13 @@ public class ViewIncomeActivty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_income);
 
+
+        DatabaseService databaseService = new DatabaseService(getApplicationContext());
+        List<Income> incomes = new ArrayList<>(); //databaseService.getIncomeDao().getAll();
+
+        for(Income income : incomes) {
+            Toast.makeText(this, "dodałeś przychód "+income.name + income.amount + income.date, Toast.LENGTH_LONG).show();
+        }
 
     }
 

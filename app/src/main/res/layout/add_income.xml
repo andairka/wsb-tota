@@ -16,7 +16,7 @@
 <!--            android:orientation="vertical">-->
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/nazwaPrzychodu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -24,7 +24,7 @@
                 android:text="@string/add_income_name" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/incomeValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -32,7 +32,7 @@
                 android:text="@string/add_value" />
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/incomeDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

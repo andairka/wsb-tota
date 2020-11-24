@@ -19,8 +19,8 @@ public interface ExpensesDao {
     Expense findByName(String category);
 
     @Insert
-    void insertAll(Expense... users);
+    void insertAll(Expense... expenses);
 
     @Delete
-    void delete(Expense user);
+    void delete(Expense expense);
 }
