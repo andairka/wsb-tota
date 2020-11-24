@@ -14,7 +14,7 @@
     <string name="add_value">Wartość</string>
     <string name="add_data">Data</string>
     <string name="add_income_button">Dodaj przychód</string>
-    <string name="add_canceled">Anuluj</string>
+    <string name="cancel">Anuluj</string>
 
     <string name="add_category_name">Rodzaj wydatku</string>
     <string name="add_expense_name">Nazwa wydatku</string>

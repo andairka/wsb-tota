@@ -39,19 +39,22 @@
             android:id="@+id/add_expense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_expense" />
+            android:text="@string/add_expense"
+            android:onClick="addOutgoButtonOnClickAction"/>
 
         <Button
             android:id="@+id/income"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/incomes" />
+            android:text="@string/incomes"
+            android:onClick="viewIncomeButtonOnClickAction"/>
 
         <Button
             android:id="@+id/expense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/expenses" />
+            android:text="@string/expenses"
+            android:onClick="ViewOutgoButtonOnClickAction"/>
     </LinearLayout>
 
     <LinearLayout
@@ -125,7 +128,8 @@
             android:id="@+id/closed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/close" />
+            android:text="@string/close"
+            android:onClick="closeButtonOnClickAction"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

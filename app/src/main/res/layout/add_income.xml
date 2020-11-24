@@ -43,13 +43,15 @@
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/add_income_button" />
+                android:text="@string/add_income_button"
+                android:onClick="addInButtonOnClickAction"/>
 
     <Button
         android:id="@+id/canceled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_canceled" />
+        android:text="@string/cancel"
+        android:onClick="cancelButtonOnClickAction"/>
     <!--        </LinearLayout>-->
 <!--    </LinearLayout>-->
 </LinearLayout>

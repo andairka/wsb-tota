@@ -10,20 +10,20 @@ import androidx.room.Room;
 
 import com.andairka.wsb.tota.database.ExpensesDatabase;
 
-public class AddIncomeActivity extends AppCompatActivity {
+public class AddOutgoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_income);
+        setContentView(R.layout.add_outgo);
 
-        ExpensesDatabase db = Room.databaseBuilder(getApplicationContext(),
-                ExpensesDatabase.class, "expense-database").build();
+
     }
 
-    public void addInButtonOnClickAction(View view) {
-        Toast.makeText(this, "dodałeś przychód", Toast.LENGTH_LONG).show();
+    public void addExpenseButtonOnClickAction(View view) {
+        Toast.makeText(this, "dodałeś wydatek", Toast.LENGTH_LONG).show();
     }
+
 
     public void cancelButtonOnClickAction(View view) {
         Intent intent = new Intent(this, MainActivity.class);
