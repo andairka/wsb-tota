@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@id/add_buttons_layout">
 
         <TextView
-            android:id="@+id/editTextTextPersonName9"
+            android:id="@+id/incomeSumLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -77,12 +77,12 @@
             android:text="@string/sum_incomes" />
 
         <EditText
-            android:id="@+id/editTextNumberSigned"
+            android:id="@+id/incomeSumValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="numberSigned" />
+            android:inputType="number" />
 
     </LinearLayout>
 
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@id/sum_income_layout">
 
         <TextView
-            android:id="@+id/editTextTextPersonName11"
+            android:id="@+id/expenseSumLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -106,12 +106,12 @@
             android:text="@string/sum_incomes" />
 
         <EditText
-            android:id="@+id/editTextNumberSigned2"
+            android:id="@+id/expenseSumValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="numberSigned" />
+            android:inputType="number" />
 
     </LinearLayout>
 

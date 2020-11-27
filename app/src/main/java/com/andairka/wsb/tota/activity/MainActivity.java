@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.andairka.wsb.tota.R;
+import com.andairka.wsb.tota.database.DatabaseService;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DatabaseService databaseService = new DatabaseService(getApplicationContext());
+
+
+        TextView expenseSumValue = (TextView) findViewById(R.id.expenseSumValue);
+        expenseSumValue.setEnabled(false);
+        expenseSumValue.setText(String.valueOf(databaseService.getExpensesDao().sumAll()));
+
+        TextView incomeSumValue = (TextView) findViewById(R.id.incomeSumValue);
+        incomeSumValue.setEnabled(false);
+        incomeSumValue.setText(String.valueOf(databaseService.getIncomeDao().sumAll()));
     }
 
 

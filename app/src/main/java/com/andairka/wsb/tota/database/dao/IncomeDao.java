@@ -19,6 +19,9 @@ public interface IncomeDao {
     @Query("SELECT * FROM income WHERE name LIKE :name")
     Income findByName(String name);
 
+    @Query("SELECT sum(amount) FROM income")
+    double sumAll();
+
     @Insert
     void insertAll(Income... incomes);
 

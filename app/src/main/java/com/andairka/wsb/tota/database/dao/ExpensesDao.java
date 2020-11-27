@@ -18,6 +18,9 @@ public interface ExpensesDao {
     @Query("SELECT * FROM expense WHERE category LIKE :category")
     Expense findByName(String category);
 
+    @Query("SELECT sum(amount) FROM expense")
+    double sumAll();
+
     @Insert
     void insertAll(Expense... expenses);
 
