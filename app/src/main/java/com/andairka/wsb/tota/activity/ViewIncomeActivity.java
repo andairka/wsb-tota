@@ -33,12 +33,6 @@ public class ViewIncomeActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.incomeListView);
         listView.setAdapter(incomeAdapter);
 
-
-
-//        for(Income income : incomes) {
-//            Toast.makeText(this, "dodałeś przychód "+income.name + income.amount + income.date, Toast.LENGTH_LONG).show();
-//        }
-
     }
 
     public void backButtonOnClickAction(View view) {
