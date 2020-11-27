@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.andairka.wsb.tota.activity.MainActivity">
 
-    <TextView
+    <ImageView
         android:id="@+id/textView"
         android:layout_width="273dp"
         android:layout_height="117dp"
         android:layout_marginLeft="68dp"
         android:layout_marginTop="68dp"
-        android:text="TextView"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/opis" />
+        app:srcCompat="@drawable/coins"
+        tools:srcCompat="@drawable/coins" />
 
     <LinearLayout
         android:id="@+id/add_buttons_layout"

@@ -3,18 +3,21 @@ package com.andairka.wsb.tota.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.andairka.wsb.tota.R;
+import com.andairka.wsb.tota.adapter.IncomeArrayAdapter;
 import com.andairka.wsb.tota.database.DatabaseService;
 import com.andairka.wsb.tota.database.entities.Income;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewIncomeActivty extends AppCompatActivity {
+public class ViewIncomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +26,18 @@ public class ViewIncomeActivty extends AppCompatActivity {
 
 
         DatabaseService databaseService = new DatabaseService(getApplicationContext());
-        List<Income> incomes = new ArrayList<>(); //databaseService.getIncomeDao().getAll();
+        List<Income> incomes = databaseService.getIncomeDao().getAll();
 
-        for(Income income : incomes) {
-            Toast.makeText(this, "dodałeś przychód "+income.name + income.amount + income.date, Toast.LENGTH_LONG).show();
-        }
+
+        IncomeArrayAdapter incomeAdapter =  new IncomeArrayAdapter(this, incomes);
+        ListView listView = findViewById(R.id.incomeListView);
+        listView.setAdapter(incomeAdapter);
+
+
+
+//        for(Income income : incomes) {
+//            Toast.makeText(this, "dodałeś przychód "+income.name + income.amount + income.date, Toast.LENGTH_LONG).show();
+//        }
 
     }
 

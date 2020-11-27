@@ -23,7 +23,7 @@
         <activity android:name=".activity.AddOutgoActivity" >
         </activity>
 
-        <activity android:name=".activity.ViewIncomeActivty" >
+        <activity android:name=".activity.ViewIncomeActivity" >
         </activity>
 
         <activity android:name=".activity.ViewOutgoActivity" >

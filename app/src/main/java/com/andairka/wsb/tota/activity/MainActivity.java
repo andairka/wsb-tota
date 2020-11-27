@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void viewIncomeButtonOnClickAction(View view) {
-        Intent intent = new Intent(this, ViewIncomeActivty.class);
+        Intent intent = new Intent(this, ViewIncomeActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Ile mamy przychodów", Toast.LENGTH_LONG).show();
     }
