@@ -15,13 +15,14 @@
 <!--            android:layout_height="match_parent"-->
 <!--            android:orientation="vertical">-->
 
-            <EditText
-                android:id="@+id/nazwaPrzychodu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/add_income_name" />
+    <EditText
+        android:id="@+id/nazwaPrzychodu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/add_income_name"
+        android:inputType="textPersonName"
+         />
 
             <EditText
                 android:id="@+id/incomeValue"
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:text="@string/add_value" />
+                android:hint="@string/add_value" />
 
             <EditText
                 android:id="@+id/incomeDate"
@@ -37,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="date"
-                tools:text="@string/add_data" />
+                tools:hint="@string/add_data" />
 
             <Button
                 android:id="@+id/button3"

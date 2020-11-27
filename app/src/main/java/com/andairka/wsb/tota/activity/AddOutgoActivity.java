@@ -1,4 +1,4 @@
-package com.andairka.wsb.tota;
+package com.andairka.wsb.tota.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,9 +6,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
-import com.andairka.wsb.tota.database.ExpensesDatabase;
+import com.andairka.wsb.tota.R;
 
 public class AddOutgoActivity extends AppCompatActivity {
 

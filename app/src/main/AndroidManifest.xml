@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.andairka.wsb.tota.MainActivity">
+        <activity android:name="com.andairka.wsb.tota.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,16 +17,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddIncomeActivity" >
+        <activity android:name=".activity.AddIncomeActivity" >
         </activity>
 
-        <activity android:name=".AddOutgoActivity" >
+        <activity android:name=".activity.AddOutgoActivity" >
         </activity>
 
-        <activity android:name=".ViewIncomeActivty" >
+        <activity android:name=".activity.ViewIncomeActivty" >
         </activity>
 
-        <activity android:name=".ViewOutgoActivity" >
+        <activity android:name=".activity.ViewOutgoActivity" >
         </activity>
     </application>
 

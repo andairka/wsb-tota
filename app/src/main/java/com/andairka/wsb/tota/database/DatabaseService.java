@@ -13,7 +13,9 @@ public class DatabaseService {
 
     public DatabaseService(Context context) {
          db = Room.databaseBuilder(context,
-                ExpensesDatabase.class, "expense-database").build();
+                ExpensesDatabase.class, "expense-database").fallbackToDestructiveMigrationOnDowngrade()
+                 .allowMainThreadQueries()
+                 .fallbackToDestructiveMigration().build();
     }
 
     public ExpensesDatabase getDatabase() {

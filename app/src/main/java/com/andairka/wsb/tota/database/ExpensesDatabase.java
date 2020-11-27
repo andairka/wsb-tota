@@ -10,7 +10,7 @@ import com.andairka.wsb.tota.database.dao.IncomeDao;
 import com.andairka.wsb.tota.database.entities.Expense;
 import com.andairka.wsb.tota.database.entities.Income;
 
-@Database(entities = {Expense.class, Income.class}, version = 1)
+@Database(entities = {Expense.class, Income.class}, version = 2)
 @TypeConverters({Converters.class})
 public abstract class ExpensesDatabase extends RoomDatabase {
     public abstract ExpensesDao expensesDao();
