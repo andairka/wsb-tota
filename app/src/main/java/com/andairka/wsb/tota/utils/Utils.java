@@ -15,4 +15,8 @@ public class Utils {
         }
         return responseDate;
     }
+
+    public static String getCurrentDate() {
+        return new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+    }
 }

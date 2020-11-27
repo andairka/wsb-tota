@@ -5,29 +5,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <Spinner
+        android:id="@+id/categoryExpenseSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/add_expense_name" />
+        android:text="@string/add_category_name"/>
+<!--    <EditText-->
+<!--        android:id="@+id/expenseCategory"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textAutoComplete"-->
+<!--        android:hint="@string/add_expense_category" />-->
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/expenseValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/add_value" />
+        android:hint="@string/add_value" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/expenseDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="date"
-        tools:text="@string/add_data" />
+        tools:hint="@string/add_data" />
 
     <Button
         android:id="@+id/button3"
@@ -36,11 +41,6 @@
         android:text="@string/add_expense_button"
         android:onClick="addExpenseButtonOnClickAction"/>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_category_name"/>
 
     <Button
         android:id="@+id/canceled"

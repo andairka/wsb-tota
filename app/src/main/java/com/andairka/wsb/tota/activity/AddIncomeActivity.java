@@ -5,13 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import com.andairka.wsb.tota.R;
 import com.andairka.wsb.tota.database.DatabaseService;
-import com.andairka.wsb.tota.database.ExpensesDatabase;
 import com.andairka.wsb.tota.database.entities.Income;
 import com.andairka.wsb.tota.utils.Utils;
 
@@ -21,6 +17,8 @@ public class AddIncomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_income);
+        TextView date = (TextView) findViewById(R.id.incomeDate);
+        date.setText(Utils.getCurrentDate());
     }
 
     public void addInButtonOnClickAction(View view) {
