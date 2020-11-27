@@ -19,4 +19,8 @@ public class Utils {
     public static String getCurrentDate() {
         return new SimpleDateFormat("dd.MM.yyyy").format(new Date());
     }
+
+    public static String parseDate(Date date) {
+        return new SimpleDateFormat("dd.MM.yyyy").format(date);
+    }
 }

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.andairka.wsb.tota.R;
 import com.andairka.wsb.tota.database.entities.Income;
+import com.andairka.wsb.tota.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public class IncomeArrayAdapter extends ArrayAdapter<Income> {
         TextView incomeItemName = (TextView) convertView.findViewById(R.id.income_item_name);
         TextView incomeItemValue = (TextView) convertView.findViewById(R.id.income_item_value);
         // Populate the data into the template view using the data object
-        incomeItemName.setText(income.name);
+        incomeItemName.setText(income.name + "    " + Utils.parseDate(income.date));
         incomeItemValue.setText(String.valueOf(income.amount));
         // Return the completed view to render on screen
         return convertView;

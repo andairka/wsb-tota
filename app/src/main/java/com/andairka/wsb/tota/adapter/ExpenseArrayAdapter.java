@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.andairka.wsb.tota.R;
 import com.andairka.wsb.tota.database.entities.Expense;
 import com.andairka.wsb.tota.database.entities.Income;
+import com.andairka.wsb.tota.utils.Utils;
 
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class ExpenseArrayAdapter extends ArrayAdapter<Expense> {
         TextView expenseItemCategory = (TextView) convertView.findViewById(R.id.expense_item_category);
         TextView expenseItemAmount = (TextView) convertView.findViewById(R.id.expense_item_amount);
         // Populate the data into the template view using the data object
-        expenseItemCategory.setText(expense.category);
+        expenseItemCategory.setText(expense.category + "    " + Utils.parseDate(expense.date));
         expenseItemAmount.setText(String.valueOf(expense.amount));
         // Return the completed view to render on screen
         return convertView;
