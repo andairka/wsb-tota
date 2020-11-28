@@ -14,8 +14,11 @@ import com.andairka.wsb.tota.utils.Utils;
 
 import java.util.List;
 
+/**
+ * Expense array adapter responsible for adapting expenses entities in view expense list.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 public class ExpenseArrayAdapter extends ArrayAdapter<Expense> {
-
 
     public ExpenseArrayAdapter(Context context, List<Expense> expenses) {
         super(context, 0, expenses);
@@ -23,18 +26,23 @@ public class ExpenseArrayAdapter extends ArrayAdapter<Expense> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         // Get the data item for this position
         Expense expense = getItem(position);
+
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.expense_item, parent, false);
         }
+
         // Lookup view for data population
         TextView expenseItemCategory = (TextView) convertView.findViewById(R.id.expense_item_category);
         TextView expenseItemAmount = (TextView) convertView.findViewById(R.id.expense_item_amount);
+
         // Populate the data into the template view using the data object
         expenseItemCategory.setText(expense.category + "    " + Utils.parseDate(expense.date));
         expenseItemAmount.setText(String.valueOf(expense.amount));
+
         // Return the completed view to render on screen
         return convertView;
     }

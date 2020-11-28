@@ -11,6 +11,10 @@ import com.andairka.wsb.tota.database.DatabaseService;
 import com.andairka.wsb.tota.database.entities.Income;
 import com.andairka.wsb.tota.utils.Utils;
 
+/**
+ * Activity responsible for adding new Income.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 public class AddIncomeActivity extends AppCompatActivity {
 
     @Override
@@ -28,6 +32,7 @@ public class AddIncomeActivity extends AppCompatActivity {
         // Get Income from view.
         Income income = this.getIncomeFromView();
 
+        // Check if income is filled properly.
         if ( income.name != null && !income.name.isEmpty() && income.date != null && income.amount > 0 ) {
             databaseService.getIncomeDao().insertAll(income);
             Intent intent = new Intent(this, MainActivity.class);
@@ -38,15 +43,22 @@ public class AddIncomeActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Handling action after Cancel button click.
+     * @param view
+     */
     public void cancelButtonOnClickAction(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Anulowałeś czynność", Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * Method gets Income item from View.
+     * @return Income object with values from view.
+     */
     private Income getIncomeFromView() {
         Income income = new Income();
-        // TU
         TextView name = (TextView) findViewById(R.id.nazwaPrzychodu);
         income.name = name.getEditableText().toString();
 

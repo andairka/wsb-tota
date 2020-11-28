@@ -14,10 +14,18 @@ import com.andairka.wsb.tota.database.DatabaseService;
 import com.andairka.wsb.tota.database.entities.Expense;
 import com.andairka.wsb.tota.utils.Utils;
 
+/**
+ * Activity responsible for adding new expense.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 public class AddOutgoActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
+    /** Categories arrays */
+    private final String[] categories = {
+            "Codzienne", "Elektronika", "Rozrywka", "Na mieście", "Rachunki", "Inne"
+    };
 
-    final String[] categories = { "Codzienne", "Elektronika", "Rozrywka", "Na mieście", "Rachunki", "Other"};
-    String spinnerSelected = categories[0];
+    /** Selected from spinner. */
+    private String spinnerSelected = categories[0];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +36,19 @@ public class AddOutgoActivity extends AppCompatActivity  implements AdapterView.
 
         Spinner spin = (Spinner) findViewById(R.id.categoryExpenseSpinner);
         spin.setOnItemSelectedListener(this);
+
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item, categories);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         //Setting the ArrayAdapter data on the Spinner
         spin.setAdapter(aa);
     }
 
+    /**
+     * Handling add expense button action.
+     * @param view View.
+     */
     public void addExpenseButtonOnClickAction(View view) {
         // Get database service.
         DatabaseService databaseService = new DatabaseService(getApplicationContext());
@@ -52,13 +66,20 @@ public class AddOutgoActivity extends AppCompatActivity  implements AdapterView.
         }
     }
 
-
+    /**
+     * Handling cancel button click.
+     * @param view View.
+     */
     public void cancelButtonOnClickAction(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Anulowałeś czynność", Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * Method gets Expense item from View.
+     * @return Expense object with values from view.
+     */
     private Expense getExpenseFromView() {
         Expense expense = new Expense();
         expense.category = this.spinnerSelected;

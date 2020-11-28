@@ -3,20 +3,19 @@ package com.andairka.wsb.tota.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.andairka.wsb.tota.R;
 import com.andairka.wsb.tota.adapter.IncomeArrayAdapter;
 import com.andairka.wsb.tota.database.DatabaseService;
 import com.andairka.wsb.tota.database.entities.Income;
-
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * View responsible for listing all incomes.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 public class ViewIncomeActivity extends AppCompatActivity {
 
     @Override

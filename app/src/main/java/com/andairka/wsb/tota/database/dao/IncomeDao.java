@@ -4,12 +4,13 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-
-import com.andairka.wsb.tota.database.entities.Expense;
 import com.andairka.wsb.tota.database.entities.Income;
-
 import java.util.List;
 
+/**
+ * Income Data Access Object.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 @Dao
 public interface IncomeDao {
 

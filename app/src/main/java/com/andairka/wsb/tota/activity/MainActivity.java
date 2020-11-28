@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.andairka.wsb.tota.R;
 import com.andairka.wsb.tota.database.DatabaseService;
 
 
+/**
+ * Main activity - entry point of application.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

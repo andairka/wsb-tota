@@ -6,16 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import com.andairka.wsb.tota.R;
 import com.andairka.wsb.tota.database.entities.Income;
 import com.andairka.wsb.tota.utils.Utils;
-
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Income array adapter responsible for adapting income entities in view income list.
+ * @author Adrianna Pater (andairka@wp.pl)
+ */
 public class IncomeArrayAdapter extends ArrayAdapter<Income> {
-
 
     public IncomeArrayAdapter(Context context, List<Income> incomes) {
         super(context, 0, incomes);
