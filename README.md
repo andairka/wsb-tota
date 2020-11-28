@@ -6,7 +6,7 @@ Aplikacja wsb-tota została napisana na potrzeby pracy zaliczeniowej z przedmiot
 
 
 Aplikacja służy do prostego monitorowania wydatków i przychodów z podziałem na kategorie. Pozwala
-szybko i w prosty sposób dodać wydaek/przychód i listować.
+szybko i w prosty sposób dodać wydatek/przychód i listować.
 
 ## Specyfikacja funkcjonalna
 Aplikacja składa się z kilku widoków
